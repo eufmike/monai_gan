@@ -1,0 +1,26 @@
+on window
+
+
+
+
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
+enumerate(DataLoader)#_MultiProcessingDataLoaderIter...        38.53%     389.596ms        38.53%     389.596ms     389.596ms       2.000us         0.03%       2.000us       2.000us             1
+enumerate(DataLoader)#_MultiProcessingDataLoaderIter...        37.77%     381.953ms        37.77%     381.953ms     381.953ms       3.000us         0.05%       3.000us       3.000us             1
+enumerate(DataLoader)#_MultiProcessingDataLoaderIter...        11.47%     116.024ms        11.48%     116.100ms     116.100ms     115.000us         1.93%     254.000us     254.000us             1
+enumerate(DataLoader)#_MultiProcessingDataLoaderIter...         9.27%      93.699ms         9.27%      93.765ms      93.765ms     118.000us         1.98%     252.000us     252.000us             1
+enumerate(DataLoader)#_MultiProcessingDataLoaderIter...         0.72%       7.244ms         0.72%       7.290ms       7.290ms      34.000us         0.57%      77.000us      77.000us             1
+enumerate(DataLoader)#_MultiProcessingDataLoaderIter...         0.57%       5.775ms         0.58%       5.885ms       5.885ms      42.000us         0.70%      86.000us      86.000us             1
+                                               aten::to         0.00%      14.000us         0.58%       5.860ms       5.860ms       7.000us         0.12%     201.000us     201.000us             1
+                                         aten::_to_copy         0.00%      38.000us         0.58%       5.846ms       5.846ms       9.000us         0.15%     194.000us     194.000us             1
+                                            aten::copy_         0.57%       5.784ms         0.57%       5.784ms       5.784ms     182.000us         3.05%     182.000us     182.000us             1
+                                               aten::to         0.00%      10.000us         0.57%       5.733ms       5.733ms       6.000us         0.10%       5.410ms       5.410ms             1
+                                         aten::_to_copy         0.00%      30.000us         0.57%       5.723ms       5.723ms      10.000us         0.17%       5.404ms       5.404ms             1
+                                            aten::copy_         0.56%       5.681ms         0.56%       5.681ms       5.681ms       5.391ms        90.30%       5.391ms       5.391ms             1
+enumerate(DataLoader)#_MultiProcessingDataLoaderIter...         0.53%       5.369ms         0.54%       5.413ms       5.413ms      41.000us         0.69%      85.000us      85.000us             1
+        autograd::engine::evaluate_function: TBackward0         0.00%      10.000us         0.44%       4.428ms       4.428ms       4.000us         0.07%      24.000us      24.000us             1
+                                             TBackward0         0.00%       5.000us         0.44%       4.418ms       4.418ms       6.000us         0.10%      20.000us      20.000us             1
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------
+Self CPU time total: 1.011s
+Self CUDA time total: 5.970ms
